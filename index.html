@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectDev - Perfil Cecília</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">⚡ ConnectDev</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar posts...">
+      <div class="user-badge">
+        <img src="https://i.pravatar.cc/100?img=47" alt="Perfil Cecília">
+        <span>Cecília</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container main-layout">
+    <!-- Sidebar Esquerda com o Perfil da Cecília -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img src="https://i.pravatar.cc/100?img=47" alt="Avatar Cecília" class="profile-img">
+        <h3>Cecília</h3>
+        <p>@cecilia_dev</p>
+        <div class="stats">
+          <div><strong>240</strong><span>Seguidores</span></div>
+          <div><strong>112</strong><span>Seguindo</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Feed Central -->
+    <main class="feed">
+      <!-- Criador de Post -->
+      <div class="create-post-card">
+        <textarea id="postInput" placeholder="No que você está trabalhando hoje, Cecília?"></textarea>
+        <button id="btnPublish">Publicar</button>
+      </div>
+
+      <!-- Abas de Navegação do Feed -->
+      <div class="feed-tabs">
+        <button class="tab-btn active" id="tabAll">Feed Principal</button>
+        <button class="tab-btn" id="tabSaved">🔖 Salvos (<span id="savedCount">0</span>)</button>
+      </div>
+
+      <!-- Indicador de Carregamento -->
+      <div id="loading" class="loading">Carregando feed da API...</div>
+
+      <!-- Feed de Publicações -->
+      <div id="postsContainer" class="posts-container"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
